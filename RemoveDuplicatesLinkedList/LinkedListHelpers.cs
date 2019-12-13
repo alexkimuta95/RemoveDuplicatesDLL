@@ -27,7 +27,9 @@ namespace RemoveDuplicatesLinkedList
                 {
                     if (start.next != null && start.data == start.next.data)
                     {
+                        
                         start.next = start.next.next;
+                      
                     }
                     else
                     {
