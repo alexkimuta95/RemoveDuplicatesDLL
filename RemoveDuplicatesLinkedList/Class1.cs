@@ -23,21 +23,11 @@ namespace RemoveDuplicatesLinkedList
             if (head != null)
             {
                 Node start = head;
-                int countrecord = 0;
                 while (start != null)
                 {
                     if (start.next != null && start.data == start.next.data)
                     {
-                        countrecord = countrecord + 1;
-                        if(countrecord >3)
-                        {
                         start.next = start.next.next;
-                        }
-                        else
-                        {
-                            start = start.next;
-                        }
-                        
                     }
                     else
                     {
@@ -45,6 +35,7 @@ namespace RemoveDuplicatesLinkedList
                     }
                 }
             }
+
             return head;
         }
 
